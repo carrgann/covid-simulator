@@ -1,6 +1,11 @@
 """COVID SIMULATOR"""
 
 from __future__ import annotations
+from random import random
+from math import sin, cos, pi, sqrt
+from turtle import Turtle, Screen, _Screen, done
+from typing import Any
+from time import time_ns
 
 # constants
 BOUNDS_WIDTH: int = 400
@@ -27,8 +32,6 @@ RECOVERY_PERIOD: int = 90
 
 # model
 
-from random import random
-from math import sin, cos, pi, sqrt
 class Point:
     """A model of a 2-d cartesian coordinate Point."""
     x: float
@@ -218,10 +221,6 @@ class Model:
         if healthy == len(self.population):
             return True
         return False
-
-from turtle import Turtle, Screen, _Screen, done
-from typing import Any
-from time import time_ns
 
 
 NS_TO_MS: int = 1000000
